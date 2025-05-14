@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "CheatGlobal VT",
+  "description": "yarrakbesting #1",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://*.virustotal.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.cheatglobal.com/*"],
+      "js": ["content.js"],
+      "css": ["modal.css"]
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png", 
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "default_title": "VirusTotal Viewer"
+  }
+}
